@@ -1,7 +1,7 @@
 [
     {
-        "version": 1,
-        "content": "初始公告",
+        "version": 3,
+        "content": "最新的公告",
         "timestamp": 1716080138000,
         "deprecated": false
     },
@@ -12,8 +12,8 @@
         "deprecated": true
     },
     {
-        "version": 3,
-        "content": "最新的公告",
+        "version": 1,
+        "content": "初始公告",
         "timestamp": 1716080138000,
         "deprecated": false
     }
