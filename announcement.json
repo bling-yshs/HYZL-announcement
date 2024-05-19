@@ -1,26 +1,8 @@
 [
-    {
-        "version": 4,
-        "content": "最新的公告4",
-        "timestamp": 1716080138002,
-        "deprecated": false
-    },
-    {
-        "version": 3,
-        "content": "最新的公告",
-        "timestamp": 1716080138000,
-        "deprecated": false
-    },
-    {
-        "version": 2,
-        "content": "这是公告2的内容",
-        "timestamp": 1716080138000,
-        "deprecated": true
-    },
-    {
-        "version": 1,
-        "content": "初始公告",
-        "timestamp": 1716080138000,
-        "deprecated": false
-    }
+  {
+    "version": 1,
+    "content": "初始公告",
+    "timestamp": 1716080138,
+    "deprecated": false
+  }
 ]

@@ -1,19 +1,47 @@
 name: update
-run-name: '更新启动器日志'
+run-name: '更新启动器公告'
 on:
-  push:
   workflow_dispatch:
+    inputs:
+      content:
+        description: '公告的内容'
+        type: string
+        required: true
 
 jobs:
-  refresh-jsdelivr:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - name: Hub Mirror Action.
-        uses: Yikun/hub-mirror-action@1.4
+      - name: checkout
+        uses: actions/checkout@v4
         with:
-          src: github/bling-yshs
-          dst: gitee/bling_yshs
-          force_update: true
-          dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          white_list: "YzLauncher-windows-announcement"
+          fetch-depth: 0
+      # 执行.github/scripts/update.cjs脚本
+      - name: run update script
+        run: |
+          echo ${{ github.event.inputs.content }}
+          echo --------------------
+          node .github/scripts/update.cjs '${{ github.event.inputs.content }}'
+      # 提交更新后的文件
+      - name: commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          commit_message=$(echo "${{ github.event.inputs.content }}" | cut -c1-10)
+          git commit -m "$commit_message"
+          git push
+
+  sync-to-gitee:
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+        - name: Mirror GitHub to Gitee
+          uses: Yikun/hub-mirror-action@master
+          with:
+            src: github/bling-yshs
+            dst: gitee/bling_yshs
+            force_update: true
+            dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
+            dst_token: ${{ secrets.GITEE_PERSIONAL_TOKEN }}
+            static_list: "YzLauncher-windows-announcement"
