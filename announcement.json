@@ -1,5 +1,11 @@
 [
     {
+        "version": 4,
+        "content": "最新的公告4",
+        "timestamp": 1716080138002,
+        "deprecated": false
+    },
+    {
         "version": 3,
         "content": "最新的公告",
         "timestamp": 1716080138000,
