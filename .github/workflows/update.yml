@@ -1,5 +1,5 @@
-name: refresh jsdelivr
-run-name: 'refresh jsdelivr'
+name: update
+run-name: '更新启动器日志'
 on:
   push:
   workflow_dispatch:
@@ -8,7 +8,10 @@ jobs:
   refresh-jsdelivr:
     runs-on: ubuntu-latest
     steps:
-      - name: Purge jsDelivr cache
-        uses: bling-yshs/purge-jsdelivr-for-directory@v1.0.0
+      - name: Hub Mirror Action.
+        uses: Yikun/hub-mirror-action@master
         with:
-          retry: '3'
+          src: github/bling-yshs
+          dst: gitee/bling_yshs
+          dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
