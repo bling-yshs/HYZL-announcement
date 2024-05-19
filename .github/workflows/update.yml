@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hub Mirror Action.
-        uses: Yikun/hub-mirror-action@master
+        uses: Yikun/hub-mirror-action@1.4
         with:
           src: github/bling-yshs
           dst: gitee/bling_yshs
+          force_update: true
           dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
+          white_list: "YzLauncher-windows-announcement"
