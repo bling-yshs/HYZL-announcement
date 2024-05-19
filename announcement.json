@@ -1,5 +1,11 @@
 [
   {
+    "version": 2,
+    "content": "启动器公告action完成",
+    "timestamp": 1716091586,
+    "deprecated": false
+  },
+  {
     "version": 1,
     "content": "初始公告",
     "timestamp": 1716080138,
