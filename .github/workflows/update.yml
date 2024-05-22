@@ -32,16 +32,16 @@ jobs:
           git commit -m "$commit_message"
           git push
 
-  sync-to-gitee:
-    needs: update
-    runs-on: ubuntu-latest
-    steps:
-        - name: Mirror GitHub to Gitee
-          uses: Yikun/hub-mirror-action@master
-          with:
-            src: github/bling-yshs
-            dst: gitee/bling_yshs
-            force_update: true
-            dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
-            dst_token: ${{ secrets.GITEE_PERSIONAL_TOKEN }}
-            static_list: "YzLauncher-windows-announcement"
+  # sync-to-gitee:
+  #   needs: update
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #       - name: Mirror GitHub to Gitee
+  #         uses: Yikun/hub-mirror-action@master
+  #         with:
+  #           src: github/bling-yshs
+  #           dst: gitee/bling_yshs
+  #           force_update: true
+  #           dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
+  #           dst_token: ${{ secrets.GITEE_PERSIONAL_TOKEN }}
+  #           static_list: "YzLauncher-windows-announcement"
