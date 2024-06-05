@@ -32,16 +32,12 @@ jobs:
           git commit -m "$commit_message"
           git push
 
-  # sync-to-gitee:
-  #   needs: update
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #       - name: Mirror GitHub to Gitee
-  #         uses: Yikun/hub-mirror-action@master
-  #         with:
-  #           src: github/bling-yshs
-  #           dst: gitee/bling_yshs
-  #           force_update: true
-  #           dst_key: ${{ secrets.SSH_PRIVATE_KEY }}
-  #           dst_token: ${{ secrets.GITEE_PERSIONAL_TOKEN }}
-  #           static_list: "YzLauncher-windows-announcement"
+      - name: Upload updater.json to R2
+        uses: gemwalletcom/r2-upload@v1.0.0
+        with:
+          endpoint: ${{ secrets.R2_ENDPOINT }}
+          access_key_id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          bucket: hyzl
+          file: './announcement.json'
+          destination: 'updater/announcement.json'
