@@ -40,4 +40,4 @@ jobs:
           secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           bucket: hyzl
           file: './announcement.json'
-          destination: 'updater/announcement.json'
+          destination: 'announcement/announcement.json'
