@@ -1,5 +1,11 @@
 [
   {
+    "version": 8,
+    "content": "2024-06-14 19:37:19 签名API已恢复",
+    "timestamp": 1718365058,
+    "deprecated": false
+  },
+  {
     "version": 7,
     "content": "2024.6.14 签名API似了，等修复吧",
     "timestamp": 1718363731,
