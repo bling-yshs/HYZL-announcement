@@ -1,5 +1,11 @@
 [
   {
+    "version": 7,
+    "content": "2024.6.14 签名API似了，等修复吧",
+    "timestamp": 1718363731,
+    "deprecated": false
+  },
+  {
     "version": 6,
     "content": "验证码提示 237 的，需要在同一网络下做验证码，或者你在自己的电脑里弄好云崽，然后把 data/icqq/你的QQ号 的文件夹传到服务器的对应位置",
     "timestamp": 1718071770,
