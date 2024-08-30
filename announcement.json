@@ -1,5 +1,11 @@
 [
   {
+    "version": 11,
+    "content": "签名API用不了了，老样子更新下启动器，然后选2->8就行",
+    "timestamp": 1724994050,
+    "deprecated": false
+  },
+  {
     "version": 10,
     "content": "版本过低的问题前两天就修好了，更新启动器到最新，然后再用一次启动器里的那个设置qsign.icu签名API的选项就行",
     "timestamp": 1719915761,
