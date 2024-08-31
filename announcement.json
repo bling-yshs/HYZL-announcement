@@ -1,5 +1,11 @@
 [
   {
+    "version": 12,
+    "content": "发现机器人对着图片没反应，可以使用BUG修复->修复 无法正确获取图片链接",
+    "timestamp": 1725124661,
+    "deprecated": false
+  },
+  {
     "version": 11,
     "content": "签名API用不了了，老样子更新下启动器，然后选2->8就行",
     "timestamp": 1724994050,
