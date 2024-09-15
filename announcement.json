@@ -1,5 +1,11 @@
 [
   {
+    "version": 13,
+    "content": "签名爆了，等修吧，可能要几天，甚至再也回不来了...",
+    "timestamp": 1726388043,
+    "deprecated": false
+  },
+  {
     "version": 12,
     "content": "发现机器人对着图片没反应，可以使用BUG修复->修复 无法正确获取图片链接",
     "timestamp": 1725124661,
