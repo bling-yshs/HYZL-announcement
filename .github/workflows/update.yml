@@ -21,7 +21,7 @@ jobs:
         run: |
           echo ${{ github.event.inputs.content }}
           echo --------------------
-          node .github/scripts/update.cjs '${{ github.event.inputs.content }}'
+          python .github/scripts/update.py ${{ github.event.inputs.content }}
       # 提交更新后的文件
       - name: commit files
         run: |
