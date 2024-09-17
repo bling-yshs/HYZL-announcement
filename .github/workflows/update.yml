@@ -30,6 +30,7 @@ jobs:
           commit_message=$(echo "${{ github.event.inputs.content }}" | cut -c1-10)
           git commit -m "$commit_message"
           git push
+        continue-on-error: true
 
       - name: Upload updater.json to R2
         uses: gemwalletcom/r2-upload@v1.0.0
