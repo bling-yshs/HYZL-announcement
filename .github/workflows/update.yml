@@ -1,7 +1,6 @@
 name: update
 run-name: '更新启动器公告'
 on:
-  push:
   workflow_dispatch:
     inputs:
       content:
